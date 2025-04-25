@@ -6,4 +6,4 @@ permalink: /writeups/
 
 # Writeups
 ## LetsDefend
-- [SOC 168 - Command Injection](https://gbermudez2.github.io/writeups/soc168/)
+- [SOC 168 - Command Injection](/writeups/soc168/)
