@@ -28,7 +28,7 @@ Originally, I've been interested in Computer Science, but recently have been int
 ## Writeups
 ### LetsDefend
 
-- [SOC 168 - Command Injection](/soc168/)
+- [SOC 168 - Command Injection](/writeups/soc168/)
 
 ## Personal Projects
 
