@@ -25,6 +25,11 @@ Originally, I've been interested in Computer Science, but recently have been int
 - CompTIA CySA+ CS0-003
 - _Prospective Certifications: CCNA_
 
+## Writeups
+### LetsDefend
+
+- [SOC 168 - Command Injection](/soc168/)
+
 ## Personal Projects
 
 - [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) (Feb 2025)
