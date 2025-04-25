@@ -4,6 +4,8 @@ Hey! I'm Gabriel, and I'm a Bachelor of Science (Computer Science) graduate from
 
 Originally, I've been interested in Computer Science, but recently have been interested in delving into the cybersecurity realm. I aim to gain more experience in the Security Operations (SOC) side of things, more specifically a role as a Tier 1 SOC Analyst. I have interests in malware analysis, threat intelligence, and threat detection.
 
+## [Writeups](https://gbermudez2.github.io/writeups/)
+
 ## Skills
 
 | Skill                                             | Project / Experience         |
@@ -24,11 +26,6 @@ Originally, I've been interested in Computer Science, but recently have been int
 - Security Analyst 1 (SAL1)
 - CompTIA CySA+ CS0-003
 - _Prospective Certifications: CCNA_
-
-## Writeups
-### LetsDefend
-
-- [SOC 168 - Command Injection](/writeups/soc168/)
 
 ## Personal Projects
 
