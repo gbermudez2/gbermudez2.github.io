@@ -11,11 +11,11 @@ Originally, I've been interested in Computer Science, but recently have been int
 | SIEM using **Splunk**                             | BTL1 Certification / TryHackMe / <a href=https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab>Reverse Shell Homelab</a> |
 | Packet Detection and Analysis using **Wireshark** | USCC / BTL1 Certification |
 | Digital Forensics using **Autopsy**               | USCC / BTL1 Certification |
-| SIEM and XDR using **Wazuh**                      | <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SSH Homelab</a> |
-| Case Management using **TheHive**                 | <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SSH Homelab</a> |
-| Security Automation using **Shuffle** + API       | <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SSH Homelab</a> |
-| Windows 10                                        | <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SSH Homelab</a>, <a href=https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab>Reverse Shell Homelab</a> |
-| Linux                                             | <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SSH Homelab</a>, <a href=https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab>Reverse Shell Homelab</a> |
+| SIEM and XDR using **Wazuh**                      | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) |
+| Case Management using **TheHive**                 | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) |
+| Security Automation using **Shuffle** + API       | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) |
+| Windows 10                                        | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main), [Reverse Shell Homelab](https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab) |
+| Linux                                             | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main), [Reverse Shell Homelab](https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab) |
 
 ## Certifications
 
@@ -27,5 +27,5 @@ Originally, I've been interested in Computer Science, but recently have been int
 
 ## Personal Projects
 
-- <a href=https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main>SOC SSH Homelab</a> (Feb 2025)
-- <a href=https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab>SOC Reverse Shell Homelab</a> (Mar 2025)
+- [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) (Feb 2025)
+- [Reverse Shell Homelab](https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab) (Mar 2025)
