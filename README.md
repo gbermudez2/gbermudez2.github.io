@@ -8,7 +8,7 @@ Originally, I've been interested in Computer Science, but recently have been int
 
 | Skill                                             | Project / Experience         |
 |---------------------------------------------------|----------------------------|
-| SIEM using **Splunk**                             | BTL1 Certification / TryHackMe / <a href=https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab>Reverse Shell Homelab</a> |
+| SIEM using **Splunk**                             | BTL1 Certification / TryHackMe / [Reverse Shell Homelab](https://github.com/gbermudez2/Reverse-Shell-Detection-Homelab) |
 | Packet Detection and Analysis using **Wireshark** | USCC / BTL1 Certification |
 | Digital Forensics using **Autopsy**               | USCC / BTL1 Certification |
 | SIEM and XDR using **Wazuh**                      | [SSH Homelab](https://github.com/gbermudez2/SSH-Detection-SOC-Homelab/tree/main) |
