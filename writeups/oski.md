@@ -11,12 +11,10 @@ permalink: /writeups/oski/
 - MITRE ATT&CK Tactics: Initial Access, Execution, Defense Evasion, Credential Access, Command and Control, Exfiltration
 
 ## Procedure
-1. Since this is a lab with potential malware, it's best practice to open it in a Virtual Machine. I opened my Windows 10 VM environment before extracting and opening the zip.
-   - Inside, there's a text file with an MD5 hash, which will be important for analysis. It's a good thing that there's no actual malware in the file, but it's better safe than sorry.
+1. The scenario involves a suspicious .ppt file that triggered SIEM alerts. The hash produced by the file is as follows:
+   - 12c1842c3ccafe7408c23ebf292ee3d9
 
-     ![image](https://github.com/user-attachments/assets/eef1c0c9-340d-4d32-9ab6-ea2847803636)
-
-2. Using the MD5 hash as suggested by the .txt file, we'll paste it into VirusTotal for some insights.
+2. Using the MD5 hash, the first thought that came to mind was pasting it into VirusTotal for some insights.
    - This is very clearly a malicious file, with 62 vendors flagging it as a trojan.
    - Looking through the Crowdsourced IDS rules, we can see that it's labeled as the **StealC C2** malware, a known infostealer.
 
