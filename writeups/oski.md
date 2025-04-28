@@ -60,5 +60,10 @@ permalink: /writeups/oski/
 
      ![image](https://github.com/user-attachments/assets/ca3de6c8-63fb-4108-a0d3-c22e34d1f6a2)
 
+8. In addition to code obfuscation, StealC and similar malware may induce tactics to evade further detection by analysts.
+   - I remembered from my earlier analysis that VirusTotal lists the files that were deleted. However, these didn't correlate to any specific directory or file pattern for Defense Evasion; these files were deleted _on execution_.
+   - I decided to go back to the any.run analysis. Within the MITRE ATT&CK matrix, there's a technique labeled "Indicator Removal" under the tactic **Defense Evasion**.
+   - Within the command line details, there's a command called "del C:\ProgramData\*.dll" that self-deletes after payload execution. Judging by the .dll, it appears to remove any traces of the malware libraries in the ProgramData folder.
+   - Looking earlier into the command, the "timeout /t 5" also indicates that the malware waits 5 seconds after exfiltration before self-deleting.
 
-
+   ![image](https://github.com/user-attachments/assets/747222da-04f2-4ea5-bd6e-da5dcbeb0548)
