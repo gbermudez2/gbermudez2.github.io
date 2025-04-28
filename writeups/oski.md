@@ -13,25 +13,52 @@ permalink: /writeups/oski/
 ## Procedure
 1. Since this is a lab with potential malware, it's best practice to open it in a Virtual Machine. I opened my Windows 10 VM environment before extracting and opening the zip.
    - Inside, there's a text file with an MD5 hash, which will be important for analysis. It's a good thing that there's no actual malware in the file, but it's better safe than sorry.
+
      ![image](https://github.com/user-attachments/assets/eef1c0c9-340d-4d32-9ab6-ea2847803636)
 
 2. Using the MD5 hash as suggested by the .txt file, we'll paste it into VirusTotal for some insights.
    - This is very clearly a malicious file, with 62 vendors flagging it as a trojan.
    - Looking through the Crowdsourced IDS rules, we can see that it's labeled as the **StealC C2** malware, a known infostealer.
+
      ![image](https://github.com/user-attachments/assets/c86257ba-0e8a-42dc-abf2-fb99454b2d95)
 
 3. We want to find out the **Creation Time** of this malware. The **Details** tab has all we need for this information.
    - Located in the History section, we can see the **Creation Time**.
    - I found it interesting to note that while the malware was made in 2022, its first sighting was almost exactly a year later.
+
      ![image](https://github.com/user-attachments/assets/9560ff2b-da4e-4b32-a8f9-f07f7e9a0bbe)
 
 4. The lab notes that the malware involved Command and Control, so we can find out the source of the attacks based on any identified IPs.
    - According to the **Contacted URLs** section under the **Relations** tab, there seems to be 2 notable URLs, notably with a domain that shares a common IP.
    - With C2, attackers may set up web servers to beacon and exfiltrate data from their victims.
+
      ![image](https://github.com/user-attachments/assets/9bb6acfa-d16d-4773-b4aa-6ce381c89fad)
 
 5. If we go to the **Behavior** section, we can look through the file interactions that the malware has, under **Activity Summary**.
    - Many files are modified when this malware is executed, but notably, there is a file called **sqlite3.dll** under the Files Dropped section.
    - According to [HYAS' StealC Report](https://www.hyas.com/blog/caught-in-the-act-stealc-the-cyber-thief-in-c), the malware requests this SQL library to assist with credential exfiltration and database access.
+
      ![image](https://github.com/user-attachments/assets/a540158f-b38d-4e59-8993-3f813022727e)
      
+6. The lab mentions that the StealC malware utilizes **RC4** for "decrypting a base64 string". Upon research, this method of encryption is used to most likely evade detection from anti-malware or static code scanning.
+   - Admittedly, I was not familiar with RC4 before, so I did some research on it, and it is a stream-cipher algorithm created by the makers of the RSA algorithm.
+   - Analyzing the malware may give insights into the RC4 key that the malware authors used to encrypt their code.
+   - any.run has a library of user reports regarding malware. I made a search using the hash, and clicked on the oldest entry to view the report.
+
+     ![image](https://github.com/user-attachments/assets/bd193017-7843-4824-9ed1-ce79fc03e3d9)
+
+   - I scrolled down a bit to view any relevant information, and I found some under **Malware Configuration**. There's a convenient section labeled "Keys" that contained the RC4 key. Using this to decrypt the attacker's code would be extremely useful for static code analysis.
+  
+     ![image](https://github.com/user-attachments/assets/ff74b795-add4-4e2a-b133-e07bf43d28da)
+
+7. StealC, as I mentioned earlier, is a known infostealer. Knowing the TTPs of the attackers can reveal vital information into how these attacks operate.
+   - Luckily, the full any.run report contains information regarding these tactics and techniques in a convenient ATT&CK matrix.
+  
+     ![image](https://github.com/user-attachments/assets/9d14955b-bfa6-4e2d-af81-72ba89cff231)
+
+   - StealC steals credentials like passwords from their victims. This is labeled as "Credentials from Password Stores" under **Credential Access**, aka T1555.
+
+     ![image](https://github.com/user-attachments/assets/ca3de6c8-63fb-4108-a0d3-c22e34d1f6a2)
+
+
+
