@@ -6,6 +6,7 @@ permalink: /writeups/oski/
 
 # Oski Writeup
 ### April 28, 2025
+### Link: https://cyberdefenders.org/blueteam-ctf-challenges/oski/
 
 ## Summary
 - Tools used: Oracle VirtualBox (Windows 10 VM), VirusTotal
