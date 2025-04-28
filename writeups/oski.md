@@ -67,3 +67,5 @@ permalink: /writeups/oski/
    - Looking earlier into the command, the "timeout /t 5" also indicates that the malware waits 5 seconds after exfiltration before self-deleting.
 
    ![image](https://github.com/user-attachments/assets/747222da-04f2-4ea5-bd6e-da5dcbeb0548)
+
+   - Most advanced malware have the capability to evade detection and cyber defenses; it's important to be vigilant and look for other indicators beyond physical evidence, such as behavior and heuristics.
