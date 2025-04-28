@@ -5,6 +5,7 @@ permalink: /writeups/oski/
 ---
 
 # Oski Writeup
+### April 28, 2025
 
 ## Summary
 - Tools used: Oracle VirtualBox (Windows 10 VM), VirusTotal
