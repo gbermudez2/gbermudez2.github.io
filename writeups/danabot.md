@@ -6,7 +6,7 @@ permalink: /writeups/danabot/
 
 # DanaBot Writeup
 ### April 28, 2025
-Link: [Oski Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
+Link: [Danabot Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
 
 ## Summary
 - Tools used: Wireshark, VirusTotal, VirtualBox (Windows 10 VM)
