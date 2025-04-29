@@ -9,7 +9,7 @@ permalink: /writeups/danabot/
 Link: [Oski Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
 
 ## Summary
-- Tools used: Wireshark, VirusTotal
+- Tools used: Wireshark, VirusTotal, VirtualBox (Windows 10 VM)
 - MITRE ATT&CK Tactics: Execution, Command and Control
 
 ## Procedure
@@ -42,5 +42,38 @@ Link: [Oski Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
 
      ![image](https://github.com/user-attachments/assets/5fbb9882-023a-45a4-9ed7-b0db827f215e)
 
-   - 
+   - This file has malicious properties, so **using a VM** would be necessary to do any analysis. Also, the file would be automatically quarantined by Windows Defender, so it's important to allow these files on a safe environment.
 
+     ![image](https://github.com/user-attachments/assets/0c42382d-d398-419e-8b62-de70494dd4d8)
+
+   -  With the file unquarantined, I could get the SHA256 hash of the malware file using PowerShell.
+  
+     ![image](https://github.com/user-attachments/assets/a086a52f-3505-4aa7-a494-720ee09905fe)
+
+4. Inputting the retrieved hash on VirusTotal can give us valuable insights. Immediately I notice that 25 vendors marked the file as malicious, and the malware contains the tags "obfuscated", "long-sleeps", and "spreader".
+   - For infostealing campaigns, this makes sense, considering that long-term persistence and detection evasion across multiple endpoints is necessary for data exfiltration.
+  
+     ![image](https://github.com/user-attachments/assets/5e2ecd17-f8c0-49da-930c-bd14757dae74)
+
+   - According to further analysis information on [any.run](any.run), this malware uses the **wscript.exe** process to execute the malware.
+  
+     ![image](https://github.com/user-attachments/assets/e81b97c5-5b6f-4a82-b723-e5eb0138c0c9)
+
+5. Going back to the Wireshark analysis, there seems to be other files within the .pcap that may be worth analyzing. I decided to investigate on the resources.dll file later in the file.
+   - .dll files being in network traffic definitely raises some eyebrows, so perhaps it could give more information.
+  
+     ![image](https://github.com/user-attachments/assets/440c6ac0-a2ec-41b7-9841-891c239da1a0)
+
+   - Unlike the login.php file that Windows Defender detected earlier, this one clearly detects it as DanaBot!
+  
+     ![image](https://github.com/user-attachments/assets/67c6e370-8bc8-4be8-8410-dfa705a560de)
+
+6. I got the file hash of this second malicious file using PowerShell once again (this time, the MD5 hash):
+
+     ![image](https://github.com/user-attachments/assets/cf3410bc-6ca2-44cb-ad57-59a729c5f308)
+  
+   - I put the hash into VirusTotal out of curiosity, and it gave all the signs pointing towards malicious activity.
+  
+     ![image](https://github.com/user-attachments/assets/79dc9ad2-8ab4-47b7-bb8c-3eeef5bf0258)
+
+### Success!
