@@ -8,6 +8,7 @@ permalink: /writeups/
 
 ## CyberDefenders
 - [Oski - Data Exfiltration](/writeups/oski/)
+- [Danabot - Data Exfiltration](/writeups/danabot/)
 
 ## LetsDefend
 - [SOC 168 - Command Injection](/writeups/soc168/)
