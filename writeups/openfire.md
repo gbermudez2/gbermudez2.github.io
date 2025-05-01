@@ -1,12 +1,12 @@
 ---
 layout: page
 title: "Openfire Writeup - CyberDefenders"
-permalink: /writeups/danabot/
+permalink: /writeups/openfire/
 ---
 
 # Openfire Writeup
 ### May 1, 2025
-Link: [Danabot Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
+Link: [Openfire Lab](https://cyberdefenders.org/blueteam-ctf-challenges/openfire/)
 
 ## References
 - [NIST](https://nvd.nist.gov/vuln/detail/cve-2023-32315)
