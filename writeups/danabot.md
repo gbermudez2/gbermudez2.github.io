@@ -13,7 +13,7 @@ Link: [Danabot Lab](https://cyberdefenders.org/blueteam-ctf-challenges/danabot/)
 - MITRE ATT&CK Tactics: Execution, Command and Control
 
 ## Procedure
-1. The scenario involves a .pcap file containing network traffic from the DanaBot malware. Wireshark will be a useful tool for analyzing the traffic here!
+1. This scenario involves a .pcap file containing network traffic from the DanaBot malware. Wireshark will be a useful tool for analyzing the traffic here, so let's see what we can discover here!
 
    ![image](https://github.com/user-attachments/assets/7b10c331-72bf-41de-acf8-5dee67599cc1)
 
