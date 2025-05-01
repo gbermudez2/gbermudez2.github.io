@@ -38,7 +38,7 @@ Link: [Openfire Lab](https://cyberdefenders.org/blueteam-ctf-challenges/openfire
      ![image](https://github.com/user-attachments/assets/444443a2-7c67-49b5-a7ac-a092aadea8fd)
 
    - It seems that after failing to log into the admin account three times, the attacker created 3 new accounts with random strings of numbers and letters.
-   - What's curious is that in the account creation parameters, the value _isadmin_ is set to "on", which means the attacker used CSRF to enable admin privileges:
+   - What's curious is that in the account creation parameters, the value _isadmin_ is set to "on", which means the attacker used the **user-create.jsp** file on the server via directory traversal to create an account with admin privileges:
   
      ![image](https://github.com/user-attachments/assets/6cd31bc0-d4b0-4cf4-a3dd-1c7a69c2857e)
 
